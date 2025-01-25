@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uninstall TFC Helper</title>
+</head>
+<style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Carian&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-straight/css/uicons-regular-straight.css');
+
+@import url('https://cdn-uicons.flaticon.com/2.6.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent; /* Removes highlight on mobile */
+}
+ 
+
+:root{
+
+
+    /* color pattels */
+
+    --first-color:  #4931e7;
+    --title-color: #25333a;
+    --text-color:  #2632388d;
+    --shadow-color: #4931e71a;
+    --body-color: #fbfaff;
+    --light-text-color: #847fa5;
+    --extra-light-color: #263238aa;
+    --weight-color: #ffffff;
+    --black-color: #000000;
+    --background-color:  #e7e3ff;
+
+}
+
+
+
+body{
+    width: 100vw;
+    height: 100svh;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: var(--background-color);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    font-family: 'Poppins',sans-serif;
+      
+}
+
+h1{
+    font-family: 'Roboto',sans-serif;
+    color: red;
+    margin-bottom: 20px;
+    /* border-bottom: 2px solid #25333a1d; */
+}
+
+h2{
+    margin-top: 40px;
+    color: #4931e7;
+}
+
+
+p{
+    width: 90%;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #25333ab4;
+    text-align: center;
+    
+}
+
+.div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 40%;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    div{
+        background-color: #4931e7;
+        padding: 5px 30px;
+        border-radius: 40px;
+        color: white;
+        font-weight: 500;
+
+        span{
+            margin-left: 10px;
+        }
+    }
+}
+
+</style>
+<body>
+    <h1>! ATTENSION PLEASE !</h1>
+    <div class="div">
+        <div >System Id<span class="systemId"></span> </div>
+        <div >Assigned User<span class="userId"></span> </div>
+        
+    </div>
+    <p>Dear User, removing the TFC Helper extension from the system is a violation of company policy. By removing it, you have breached the company's policy, and as a result, your attendance will no longer be considered valid from today. Furthermore, your access to the attendance system has been suspended.</p>
+    
+    <h2>Thank You !</h2>
+
+    <script>
+       // Function to extract query parameters
+       function getQueryParam(paramName) {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      return urlParams.get(paramName);
+    }
+
+    // Get the values from URL
+    const systemId = getQueryParam('systemId');
+    const userId = getQueryParam('userId');
+
+    // Update the DOM elements
+    if (systemId) {
+      document.querySelector('.systemId').textContent = systemId;
+    } else {
+      document.querySelector('.systemId').textContent = '';
+    }
+
+    if (userId) {
+      document.querySelector('.userId').textContent = userId;
+    } else {
+      document.querySelector('.userId').textContent = '';
+    }
+
+    </script>
+</body>
+</html>
